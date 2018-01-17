@@ -1,0 +1,50 @@
+# show disks
+Location   Serial Number         Vendor   Rev   Description Usage  Jobs Speed (kr/min)  Size    Sec Fmt    Vdisk   Pool    Tier Health
+-------------------------------------------------------------------------------------------------------------------------------------------
+1.1        PFV980PE              HITACHI  A5D2  SAS         VDISK  VRSC 10              300.0GB 512n       vd0001  vd0001  N/A  OK
+1.2        PDYLA21E              HITACHI  A5D0  SAS         VDISK  VRSC 10              300.0GB 512n       vd0001  vd0001  N/A  OK
+1.3        3NM6YRFK00009922J6L0  SEAGATE  0003  SAS         VDISK  VRSC 10              146.8GB 512n       vd0001  vd0001  N/A  OK
+1.4        BV00P8A00FL6          FUJITSU  6501  SAS         AVAIL       15              73.5GB  512n                       N/A  OK
+1.6        3NM4RAPT00009833G6PS  HP       HPDF  SAS         AVAIL       10              146.8GB 512n                       N/A  OK
+1.8        BSA0P8A01BFP          FUJITSU  6501  SAS         AVAIL       10              73.5GB  512n                       N/A  OK
+1.9        BSA0P8A01BFH          FUJITSU  6501  SAS         AVAIL       10              73.5GB  512n                       N/A  OK
+1.11       BSA0P8A01BFC          FUJITSU  6501  SAS         AVAIL       10              73.5GB  512n                       N/A  OK
+1.12       PFVG2BRE              HITACHI  A5D2  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+1.13       PFVEUJTE              HITACHI  A5D2  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+1.14       KNX0PS9P              HITACHI  A350  SAS         AVAIL       10              600.1GB 512n                       N/A  OK
+1.15       3SE0FT8800009926KYU1  SEAGATE  0006  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+1.16       3SE0G48B00009928RHQC  SEAGATE  DHE0  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+1.18       3NM84K3Z00009918N6YK  SEAGATE  0003  SAS         AVAIL       10              146.8GB 512n                       N/A  OK
+1.19       PDYYZLPE              HITACHI  A5D0  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+1.20       3NP27YJY000098199DR4  HP       HPDD  SAS         AVAIL       10              73.4GB  512n                       N/A  OK
+1.22       3SE0FBHK00009928Q9KK  SEAGATE  DHE0  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+1.23       BSA0P8A01BFB          FUJITSU  6501  SAS         AVAIL       10              73.5GB  512n                       N/A  OK
+2.1        PMK9XL6B              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.2        PMKABSBB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.3        PMK2NGNB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.4        PMKA26HB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.5        PMK9XTPB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.6        PMKARJ9B              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.7        PMK8KRXB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.8        PMJAZMWB              HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.9        PMKB8VBB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.10       PMK9LBVB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.11       PMJ6HV4B              HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.12       PMKAG2UB              HP       HPD6  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.13       6XP1MPR20000B2219KCM  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.14       P4W0MBUA              HP       HPD6  SAS         AVAIL       10              146.8GB 512n                       N/A  OK
+2.15       6XP1MRLS0000B218BUPG  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.16       6XP1MMMK0000B217AJXM  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.17       6XP1MPR80000B216BNJ1  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.18       6XP1MSP40000B217BHUY  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.19       6XP1MPLF0000B2179H5V  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.20       6XP1MPXR0000B2219G7N  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.21       6XP1M3Q00000B2219G63  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.22       6XP1MSPA0000B215D2LL  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.23       6XP1MRM20000B217AQHL  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.24       6XP1M3MB0000B217C5U3  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+2.25       6XP1FH0C0000B2219FML  HP       HPD5  SAS         AVAIL       10              300.0GB 512n                       N/A  OK
+-------------------------------------------------------------------------------------------------------------------------------------------
+Info:  * Rates may vary. This is normal behavior. (2017-09-05 08:39:37)
+
+Success: Command completed successfully. (2017-09-05 08:39:37)

@@ -1,0 +1,11 @@
+{
+
+	"FTP_LOGIN": {
+		"hostA" : "10.1.25.256",
+		"hostB" : "10.1.25.87",
+		"username" : "manage",
+		"password" : "!manage",
+		"iter" : "5"	
+	}
+	
+}
