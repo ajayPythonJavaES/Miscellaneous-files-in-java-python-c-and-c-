@@ -1,70 +1,42 @@
-package com.ds.plugin;
+package com.plugin.ds;
 
 public class LinkedList {
 
-	class Node {
-		Object data;
-		Node node;
+	private static final long serialVersionUID = 1L;
 
-		Node() {
-
-		}
-	}
-
-	private Node[] list;
-	private int currentPos;
-	private static int DEFAULT_CAPACITY = 10;
-
+	private static Object[] store;
+	private final int DEFAULT_CAPACITY = 10;
+	
+	private static int size = 0;
+	
+	private static int currentPos = 0;
+	
 	public LinkedList() {
-		try {
-			list = new Node[DEFAULT_CAPACITY];
-			currentPos = 0;
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
+		store = new Object[DEFAULT_CAPACITY];
+	}
+	
+	public LinkedList(int capacity) {
+		store = new Object[capacity];
+	}
+	
+	private class Node {
+		
+		Object data = null;
+		Node node = null;
+		
+		Node(Object data, Node node) {
+			this.data = data;
+			this.node = node;
 		}
 	}
-
-	private void push(Object data) {
-		try {
-			if (currentPos != 0) {
-				Node prevNode = list[currentPos];
-
-				Node dataNode = new Node();
-				dataNode.data = data;
-				dataNode.node = null;
-
-				if (prevNode != null && prevNode.node == null) {
-					prevNode.node = dataNode;
-				}
-			}
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
+	
+	public boolean push(Object data) {
+		Node head = null;
+		if(store[currentPos] != null) {
+			head = (Node)store[currentPos];
 		}
+		return false;
 	}
-
-	class CheckCapacity extends Thread {
-
-		private int _size;
-
-		private CheckCapacity(int _size) {
-			this._size = _size;
-		}
-
-		@Override
-		public void run() {
-			try {
-				if (_size > Integer.MAX_VALUE) {
-					throw new LinkedListException("Stack overflow");
-				} else {
-					if (_size > DEFAULT_CAPACITY) {
-						DEFAULT_CAPACITY *= 3 / 2;
-					}
-				}
-			} catch (LinkedListException eMsg) {
-
-			}
-		}
-
-	}
-
+	
+	
 }
