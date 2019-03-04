@@ -1,147 +1,94 @@
-package com.ds.plugin;
+package com.java.multithreading;
 
-public class LinkedListUsingArrays {
+/**
+ * 
+ * @author asarvasi This linked list is implemented without using array.
+ */
 
-	class Node {
-		Object data;
-		Node node;
+class Node {
+	int data;
+	Node next;
 
-		Node(Object data, Node node) {
-			this.data = data;
-			this.node = node;
-		}
+	public Node(int data, Node next) {
+		this.data = data;
+		this.next = next;
 	}
 
-	private Node[] list;
-	private int currentPos;
-	private static int DEFAULT_CAPACITY = 10;
+}
+
+public class LinkedList {
+
 	private int size = 0;
 
-	public LinkedListUsingArrays() {
-		try {
-			list = new Node[DEFAULT_CAPACITY];
-			currentPos = 0;
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
-		}
-	}
+	private Node currNode, startNode;
 
-	private LinkedListUsingArrays(int capacity) {
+	public void add(int data) {
 		try {
-			list = new Node[capacity];
-			currentPos = 0;
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
-		}
-	}
-
-	public void push(Object data) {
-		try {
-			Node dataNode = new Node(data, null);
-
-			if (currentPos > DEFAULT_CAPACITY) {
-				CheckCapacity ccObj = new CheckCapacity(currentPos);
-				ccObj.start();
+			Node newNode = null;
+			newNode = new Node(data, null);
+			if (size == 0) {
+				startNode = currNode = newNode;
+			} else if (currNode != null && size != 0) {
+				currNode = currNode.next = newNode;
 			}
-
-			if (currentPos == 0) {
-				list[currentPos] = dataNode;
-			} else {
-				list[currentPos] = list[currentPos - 1].node = dataNode;
-			}
-			currentPos++;
 			size++;
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
+		} catch (Exception exc) {
+			exc.printStackTrace();
 		}
 	}
 
-	public void pop() {
+	public void displayData() {
 		try {
-			if (currentPos == 0) {
-				throw new LinkedListException("List is empty");
+			Node traceNext = startNode;
+			if (size == 0) {
+				throw new Exception("List is empty");
 			} else {
-				currentPos--;
-				size--;
-				list[currentPos] = list[currentPos - 1].node = null;
-			}
-		} catch (LinkedListException eMsg) {
-			eMsg.printStackTrace();
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
-		}
-	}
-
-	public int size() {
-		return size;
-	}
-
-	public int getIndex(Object data) {
-		int pos = 0;
-		try {
-			boolean flag = false;
-			int loop = 0;
-			for (Node node : list) {
-				if (node != null && node.data.equals(data)) {
-					flag = true;
-					pos = loop;
+				int i = 1;
+				while (traceNext != null) {
+					System.out.println(traceNext.data + "--" + i++);
+					traceNext = traceNext.next;
 				}
-				loop++;
+				System.out.println("Size of the list is: " + size);
 			}
-			if (!flag) {
-				pos = -1;
-			}
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
+		} catch (Exception exc) {
+			exc.printStackTrace();
 		}
-		return pos;
 	}
 
-	public void displayElements() {
+	public void delete(int data) {
 		try {
-			Node headNode = list[0];
-			if (headNode == null) {
-				throw new LinkedListException("List is empty");
-			} else {
-				while (headNode != null) {
-					System.out.println(headNode.data);
-					headNode = headNode.node;
-				}
-			}
+			Node trav = startNode;
+			Node prev = null;
 
-		} catch (LinkedListException lleMsg) {
-			lleMsg.printStackTrace();
-		} catch (Exception eMsg) {
-			eMsg.printStackTrace();
-		}
-	}
-
-	class CheckCapacity extends Thread {
-
-		private int _size;
-
-		private CheckCapacity(int _size) {
-			this._size = _size;
-		}
-
-		@Override
-		public void run() {
-			try {
-				if (_size > Integer.MAX_VALUE) {
-					throw new LinkedListException("Stack overflow");
-				} else {
-					if (_size > DEFAULT_CAPACITY) {
-						DEFAULT_CAPACITY *= 3 / 2;
-						@SuppressWarnings("unused")
-						LinkedListUsingArrays llObj = new LinkedListUsingArrays(
-								DEFAULT_CAPACITY);
+			while (trav != null) {
+				if (trav.data == data) {
+					if (prev != null) {
+						prev.next = trav.next;
+					} else {
+						startNode = trav.next;
 					}
+					size--;
+				} else {
+					prev = trav;
 				}
-			} catch (LinkedListException eMsg) {
-				eMsg.printStackTrace();
+				trav = trav.next;
 			}
-		}
 
+		} catch (Exception exc) {
+			exc.printStackTrace();
+		}
+	}
+
+	public static void main(String ar[]) {
+		LinkedList llObj = new LinkedList();
+		int i = 10;
+		while (i != 0) {
+			llObj.add(i * 10);
+			--i;
+		}
+		llObj.displayData();
+		llObj.delete(10);
+		llObj.displayData();
 	}
 
 }
